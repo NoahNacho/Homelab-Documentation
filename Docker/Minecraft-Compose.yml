@@ -1,0 +1,17 @@
+version: "3"
+services:
+  mc:
+    #container_name: 'insert name here'
+    image: itzg/minecraft-server:java21
+    ports:
+      - :25565
+    environment:
+      EULA: "TRUE"
+      MEMORY: 20G
+      TZ: America/Detroit
+    tty: true
+    stdin_open: true
+    restart: unless-stopped
+    volumes:
+      # attach a directory relative to the directory containing this compose file
+      - :/data
