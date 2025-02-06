@@ -1,0 +1,16 @@
+[Unit]
+Description=Unturned Server
+After=network.target
+
+[Service]
+Restart=on-failure
+RestartSec=1s
+PrivateTmp=true
+Type=simple
+User=ubuntu
+WorkingDirectory=/home/ubuntu/Steam/steamapps/common/U3DS
+ExecStart=/home/ubuntu/Steam/steamapps/common/U3DS/ServerHelper.sh
+
+[Install]
+WantedBy=multi-user.target
+EOL

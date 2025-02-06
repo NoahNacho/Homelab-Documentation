@@ -1,0 +1,4 @@
+[Minecraft]
+title=Minecraft profile
+description=Ports to open for Minecraft dedicated game server
+ports=25565/tcp

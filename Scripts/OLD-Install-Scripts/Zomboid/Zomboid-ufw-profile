@@ -1,0 +1,4 @@
+[Zomboid]
+title=Zomboid server profile
+description=Ports to open for unturned dedicated game server
+ports=8766,16261/udp

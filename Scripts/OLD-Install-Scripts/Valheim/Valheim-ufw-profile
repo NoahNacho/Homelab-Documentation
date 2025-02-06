@@ -1,0 +1,4 @@
+[Valheim]
+title=Valheim ports
+description=Ports to open for Valheim dedicated game server
+ports=2456,2457/tcp|2456,2457/udp

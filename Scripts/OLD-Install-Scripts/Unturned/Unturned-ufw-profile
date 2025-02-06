@@ -1,0 +1,4 @@
+[Unturned]
+title=Unturned profile
+description=Ports to open for unturned dedicated game server
+ports=27015,27016/tcp|27015,27016/udp

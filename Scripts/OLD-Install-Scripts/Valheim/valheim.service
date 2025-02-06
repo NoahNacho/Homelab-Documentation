@@ -1,0 +1,16 @@
+[Unit]
+Description=Valheim server
+After=network.target
+
+[Service]
+Restart=on-failure
+RestartSec=1s
+PrivateTmp=true
+Type=simple
+User=ubuntu
+WorkingDirectory=/home/User/Valheim
+ExecStart=/home/User/Valheim/Valheim.sh
+
+[Install]
+WantedBy=multi-user.target
+EOL

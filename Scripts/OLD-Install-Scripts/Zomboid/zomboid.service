@@ -1,0 +1,16 @@
+[Unit]
+Description=Project Zomboid Server
+After=network.target
+
+[Service]
+Restart=on-failure
+RestartSec=1s
+PrivateTmp=true
+Type=simple
+User=ubuntu
+WorkingDirectory=/home/USER/Steam/steamapps/common/PZ
+ExecStart=/home/USER/Steam/steamapps/common/PZ/start-server.sh
+
+[Install]
+WantedBy=multi-user.target
+EOL

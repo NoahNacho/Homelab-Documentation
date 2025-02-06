@@ -1,0 +1,16 @@
+[Unit]
+Description=Minecraft server
+After=network.target
+
+[Service]
+Restart=on-failure
+RestartSec=1s
+PrivateTmp=true
+Type=simple
+User=ubuntu
+WorkingDirectory=/home/ubuntu/Minecraft
+ExecStart=java -jar /home/ubuntu/Minecraft/paper-1.19.2-138.jar
+
+[Install]
+WantedBy=multi-user.target
+EOL
