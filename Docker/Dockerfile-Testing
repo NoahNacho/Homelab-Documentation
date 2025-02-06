@@ -1,0 +1,19 @@
+# Build Docker container playground for linux+ Labs
+
+FROM ubuntu:latest
+
+RUN apt update \
+ && apt install sudo -y
+
+
+#Make two users to play with one with sudo perms and a password
+
+RUN useradd -m -s /bin/bash noah \
+ && usermod -aG sudo noah \
+ && echo "noah:pass" | chpasswd \
+ && useradd -m -s /bin/bash tester
+
+ENV PATH="/usr/local/bin:${PATH}"
+USER noah
+WORKDIR /home/noah
+CMD ["/bin/bash"]
